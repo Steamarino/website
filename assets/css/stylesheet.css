@@ -548,13 +548,13 @@ body {
             rgba(10, 10, 10, 0.3),
             rgb(10, 10, 10)
     ),
-    url("https://cdn.tristan.cf/img/banner1.jpg");
+    url("https://cdn.tristan.cf/hotlink-ok/img/banner1.jpg");
     --background-background: linear-gradient(
             0deg,
             rgba(10, 10, 10, 1),
             rgba(10, 10, 10, 0.6)
     ),
-    url("https://cdn.tristan.cf/img/banner1.jpg") center center fixed;
+    url("https://cdn.tristan.cf/hotlink-ok/img/banner1.jpg") center center fixed;
     --height: 50vh;
 }
 
@@ -585,6 +585,6 @@ body {
                 rgba(10, 10, 10, 1),
                 rgba(10, 10, 10, 0)
         ),
-        url("https://cdn.tristan.cf/img/banner1.jpg") !important;
+        url("https://cdn.tristan.cf/hotlink-ok/img/banner1.jpg") !important;
     }
 }
