@@ -12,5 +12,6 @@
     <orderEntry type="library" name="animate.css" level="application" />
     <orderEntry type="library" name="jquery-3.4.1" level="application" />
     <orderEntry type="library" name="magic-grid" level="application" />
+    <orderEntry type="library" name="beacon" level="application" />
   </component>
 </module>

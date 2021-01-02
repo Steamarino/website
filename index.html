@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
     <meta content="ie=edge" http-equiv="X-UA-Compatible"/>
     <title>Tristan's personal website</title>
     <meta property="og:title" content="Tristan's personal website">
@@ -14,8 +14,6 @@
     <link rel="stylesheet" href="/assets/css/stylesheet.css">
     <link rel="stylesheet" href="/assets/css/animate-3.7.0.min.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css">
-    <script src="/assets/js/jquery-3.4.1.min.js"></script>
-    <script src="/assets/js/magic-grid-3.2.4.min.js"></script>
 </head>
 <body>
 <div id="loading">
@@ -34,7 +32,7 @@
         <span style="display: none;"><i class="fas fa-user-tie"></i> &nbsp;&nbsp; </span>
         <span style="display: block;"><i class="fas fa-users"></i> &nbsp;
             <a href="https://github.com/EneryTheDiscordBot" target="_blank">@EneryTheDiscordBot </a>
-            <a href="https://github.com/mediadex" target="_blank">@MediaDex </a>
+            <a href="https://github.com/shareyourmedia" target="_blank">@ShareYourMedia </a>
         </span>
         <div class="socials">
             <span style="display: block;">
@@ -98,52 +96,39 @@
             </a>
         </div>
     </div>
-    <div id="forks" style="display: none;">
-        <h1>Forks</h1>
-        <div class="projects" id="forks_section"></div>
-    </div>
     <div id="footer">
         <a href="https://github.com/imfunniee" target="_blank">Based on gitfolio by imfunniee</a>
     </div>
-    <script type="text/javascript">
-        setTimeout(async function () {
-            await document.getElementById("loading").classList.add("animated");
-            await document.getElementById("loading").classList.add("fadeOut");
-            setTimeout(async function () {
-                await document.getElementById("loading").classList.remove("animated");
-                await document.getElementById("loading").classList.remove("fadeOut");
-                document.getElementById("loading").style.display = "none";
-            }, 800);
-        }, 1500);
-    </script>
-    <script type="text/javascript">
-        (async function () {
-            const magicProjectsGrid = await new MagicGrid({
-                container: "#work_section",
-                animate: false,
-                gutter: 30, // default gutter size
-                static: true,
-                useMin: false,
-                maxColumns: 2,
-                useTransform: true
-            });
-
-            const magicForksGrid = await new MagicGrid({
-                container: "#forks_section",
-                animate: false,
-                gutter: 30, // default gutter size
-                static: true,
-                useMin: false,
-                maxColumns: 2,
-                useTransform: true
-            });
-
-            $("document").ready(async () => {
-                await magicProjectsGrid.listen();
-                await magicForksGrid.listen();
-            });
-        })();
-    </script>
 </div>
+<script src="/assets/js/jquery-3.4.1.min.js"></script>
+<script src="/assets/js/magic-grid-3.2.4.min.js"></script>
+<script type="text/javascript">
+    setTimeout(async function () {
+        await document.getElementById("loading").classList.add("animated");
+        await document.getElementById("loading").classList.add("fadeOut");
+        setTimeout(async function () {
+            await document.getElementById("loading").classList.remove("animated");
+            await document.getElementById("loading").classList.remove("fadeOut");
+            document.getElementById("loading").style.display = "none";
+        }, 800);
+    }, 1500);
+</script>
+<script type="text/javascript">
+    (async function () {
+        const magicProjectsGrid = await new MagicGrid({
+            container: "#work_section",
+            animate: false,
+            gutter: 30, // default gutter size
+            static: true,
+            useMin: false,
+            maxColumns: 2,
+            useTransform: true
+        });
+        await $("document").ready(async () => {
+            await magicProjectsGrid.listen();
+        });
+    })();
+</script>
+<!-- Cloudflare Web Analytics --><script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "b2a183652ad34788b25c4d437a1a0763"}'></script><!-- End Cloudflare Web Analytics -->
 </body>
 </html>
