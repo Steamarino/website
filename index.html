@@ -6,7 +6,7 @@
     <meta content="ie=edge" http-equiv="X-UA-Compatible"/>
     <title>Tristan's personal website</title>
     <meta property="og:title" content="Tristan's personal website">
-    <meta property="og:description" content="Hi, I'm Tristan. Nice to see you 👋">
+    <meta property="og:description" content="Hi, I'm Tristan. Nice to see you 🙂">
     <meta property="og:url" content="https://tristan.cf">
     <meta property="og:type" content="website">
     <meta property="og:image" content="https://avatars.githubusercontent.com/u/43283797">
@@ -89,8 +89,18 @@
                         <span style="display: block;">Discord bot to learn programming.</span>
                     </div>
                     <div class="bottom_section">
-                        <span style="display: inline-block;"><i
-                                class="fas fa-code"></i>&nbsp; JS, Java, HTML, CSS</span>
+                        <span style="display: inline-block;"><i class="fas fa-code"></i>&nbsp; JS, Java, HTML, CSS</span>
+                    </div>
+                </section>
+            </a>
+            <a href="https://shareyourmedia.org" target="_blank">
+                <section>
+                    <div class="section_title">ShareYourMedia</div>
+                    <div class="about_section">
+                        <span style="display: block;">Website to learn web development.</span>
+                    </div>
+                    <div class="bottom_section">
+                        <span style="display: inline-block;"><i class="fas fa-code"></i>&nbsp; HTML, JS, CSS, Java, PHP, Python</span>
                     </div>
                 </section>
             </a>
@@ -104,18 +114,18 @@
 <script src="/assets/js/magic-grid-3.2.4.min.js"></script>
 <script type="text/javascript">
     setTimeout(async function () {
-        await document.getElementById("loading").classList.add("animated");
-        await document.getElementById("loading").classList.add("fadeOut");
+        document.getElementById("loading").classList.add("animated");
+        document.getElementById("loading").classList.add("fadeOut");
         setTimeout(async function () {
-            await document.getElementById("loading").classList.remove("animated");
-            await document.getElementById("loading").classList.remove("fadeOut");
+            document.getElementById("loading").classList.remove("animated");
+            document.getElementById("loading").classList.remove("fadeOut");
             document.getElementById("loading").style.display = "none";
         }, 800);
     }, 1500);
 </script>
 <script type="text/javascript">
     (async function () {
-        const magicProjectsGrid = await new MagicGrid({
+        const magicProjectsGrid = new MagicGrid({
             container: "#work_section",
             animate: false,
             gutter: 30, // default gutter size
@@ -124,8 +134,8 @@
             maxColumns: 2,
             useTransform: true
         });
-        await $("document").ready(async () => {
-            await magicProjectsGrid.listen();
+        $("document").ready(async () => {
+            magicProjectsGrid.listen();
         });
     })();
 </script>
